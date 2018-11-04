@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row custom-row">
+      <div class="row">
+        <img src="./../../../assets/back-arrow.png" alt="back" height="42" width="42" (click)="goback()">
+        <span class="map-heading">Direction</span>
+      </div>
+      <div class="row custom-search">
+        <form (submit)="setDestination()">
+        <div class="input-group col-md-9">
+          <input type="text" class="form-control" name="address" [(ngModel)]="address" placeholder="Enter the Destination">
+          <span class="input-group-btn">
+            <button class="btn btn-default btn-md back-color" type="submit">Find Route!!!</button>
+          </span>
+        </div>
+      </form>
+      </div>
+      <div class="row">
+        <br>
+      </div>
+      <div id="showmaps" class="row" style="display: none;">
+        <agm-map [zoom]="16" [latitude]="lat" [longitude]="lng">         
+          <agm-direction [origin]="origin" [destination]="destination"></agm-direction>  
+        </agm-map>
+      </div>
+      <div class="row">
+        <br>
+        <div *ngIf="distance">
+          <span>{{'Total distance : ' + distance + ' Kms' }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+  
+  </div>

@@ -1,0 +1,62 @@
+.container {
+
+
+    .jumbotron-head {    
+        background: url('./../../../assets/car.gif') no-repeat lightslategrey;
+        color:ghostwhite;
+        text-align: left;        
+        background-position: 123% 10%;
+    }
+
+    .jumbotron-footer {
+        background:lightslategrey;
+        color:ghostwhite;
+        text-align: center;
+    }
+
+    .mobile-img {
+        span {
+            background: url('./../../../assets/journey.png') no-repeat;
+            height: 285px;
+            width: 100%;
+            display: inline-block;    
+            background-size: 100% 100%;
+        }
+    }
+
+    .content {
+        position: relative;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        top: 20%;
+        color: darkslategrey;
+        @media screen and (min-width: 320px) and (max-width: 900px) {
+            top: 0%;
+        }      
+        .content-second {
+            font-size: 24px;
+            }
+        }
+    .button-pos {
+        position: relative;
+        top: 30%;
+        @media screen and (min-width: 320px) and (max-width: 900px) {
+            top: 5%;
+            .col-md-4 {
+                flex: unset;
+                max-width:100%;
+            }
+        }
+        button {            
+            border: 2px solid #302f3f;
+             
+            a{
+                color: #302f3f;
+            }
+            a:hover, a:active {
+                color: #302f3f;                
+            }
+        }
+        }
+    }

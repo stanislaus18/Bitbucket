@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row custom-row">
+    <div class="row">
+      <img src="./../../../assets/back-arrow.png" alt="back" height="42" width="42" (click)="goback()">
+      <span class="map-heading">Information</span>
+    </div>
+    <div class="row custom-search">
+      <form (submit)="submit()">
+      <div class="input-group col-md-9">
+        <input type="text" class="form-control" name="address" [(ngModel)]="address" placeholder="Enter place to search cabs">
+        <span class="input-group-btn">
+          <button class="btn btn-default btn-md back-color" type="submit">Search!!!</button>
+        </span>
+      </div>
+    </form>
+    </div>
+    <div class="row">
+      <br>
+    </div>
+    <div class="row">
+      <agm-map [zoom]="16" [latitude]="lat" [longitude]="lng">
+        <div>
+        <agm-marker *ngFor="let car of cars; let i = index" (markerClick)="openWindow(i)" [latitude]="car.coordinates[1]"
+          [longitude]="car.coordinates[0]" [iconUrl]="iconurl" id="marker{{i}}">
+          <agm-info-window [isOpen]="isInfoWindowOpen(i)" [latitude]="car.coordinates[1]" [longitude]="car.coordinates[0]">
+            <p><b>{{car.address}}</b></p>
+            <p><b>Engine Type</b> : {{car.engineType}}, <b>Fuel</b> : {{car.fuel}},</p>
+            <p><b>Name</b> : {{car.name}}</p>
+          </agm-info-window>
+
+        </agm-marker>
+      </div>
+        <!-- <agm-direction *ngIf="true" [origin]="origin" [destination]="destination"></agm-direction> -->
+
+      </agm-map>
+    </div>
+    <div class="row">
+      <br>
+    </div>
+  </div>
+</div>
+<div class="container">
+
+</div>

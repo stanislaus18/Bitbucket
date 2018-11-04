@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="row custom-header">
+      <img src="./../../../assets/back-arrow.png" alt="back" height="42" width="42" (click)="goback()">
+      <span class="map-heading">Information</span>
+    </div>
+    <div class="row custom-body">
+      <input class= "form-control custom-input" [(ngModel)]="searchText" placeholder="Enter the Origin">
+      <ul class="list-group custom-ul">
+        <li class="list-group-item" *ngFor="let cab of cabs | searchcabs : searchText| slice:0:10; let i=index" (click)="directions(cab)">
+          {{cab.address}} <img src="./../../../assets/more.png" alt="back" height="42" width="42">
+          <span> {{ 'Name : ' + cab.name +', Fuel :' +cab.fuel +', Engine Type :' + cab.engineType}}</span>          
+        </li>
+      </ul>
+    </div>
+  </div>

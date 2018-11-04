@@ -1,0 +1,42 @@
+.container {
+    .jumbotron-head {    
+        background: url('./../../../assets/car.gif') no-repeat lightslategrey;
+        color:ghostwhite;
+        text-align: left;        
+        background-position: 123% 10%;
+        margin-bottom: 3px;
+    }    
+    .row {
+        margin: unset;
+        display: block;
+        flex-wrap: unset;
+        .custom-div {
+            width: 100%;
+            height: 500px;
+            background: url('./../../../assets/dash-background.jpg') lightslategrey;
+            text-align: center;
+            position: relative;
+            .custom-pos {
+                top: 31%;
+                .set-margin {
+                    margin-right: 32%;
+                    @media screen and (min-width: 320px) and (max-width: 430px) {
+                        margin-right: unset;
+                    }
+                }
+            .btn-primary-outline {
+                
+                background-color: transparent;
+                border-color: ghostwhite;
+                
+                a{
+                    color: ghostwhite;
+                }
+                a:hover, a:active {
+                    color: ghostwhite;
+                }
+              }
+            }
+        }
+    }
+}

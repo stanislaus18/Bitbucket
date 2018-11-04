@@ -1,0 +1,48 @@
+.container {
+    .row {
+        display: block;
+        margin: unset;
+        flex-wrap: unset;
+        width: 100%;
+        background-color: lightslategrey;
+        .custom-header {
+            display: inline-block;
+            
+            span{
+                float: right;
+                color: ghostwhite;
+                font-size: 28px;
+                padding-right: 12px;
+            }
+            img {
+                float: left;
+                padding-left: 4px;
+            }
+        }
+        .custom-body {
+            padding: 0 10px 0 10px;
+            .custom-input {
+                height: 50px;
+            }
+            .custom-ul {
+                margin-top: 3px;
+                li {
+                    height: 53px;
+                    @media screen and (min-width: 320px) and (max-width: 900px) {
+                        height: unset;
+                    }  
+                span {
+                    font-size: 12px;
+                    float: right;
+                    color:grey;
+                }
+                img {
+                    float: right;
+                    position: relative;
+                    top: -10px;
+                }
+            }
+            }
+        }
+    }
+}
